@@ -21,9 +21,11 @@ export default function Home(props) {
   }
 
   const showFilteredBeers = query
-    ? beers.filter((beer) => beer.name.toLowerCase().includes(query))
+    ? beers.filter((beer) =>
+        beer.name.toLowerCase().includes(query.toLowerCase())
+      )
     : beers
-
+  console.log(showFilteredBeers)
   return (
     <Layout isHomePage>
       <SearchContainer>
