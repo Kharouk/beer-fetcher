@@ -1,31 +1,57 @@
 import Image from 'next/image'
-import Link from 'next/link'
+import styled from 'styled-components'
+import Button from './Button'
+
+const ListContainer = styled.ul`
+  padding: 2rem;
+  list-style: none;
+  display: flex;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  flex-wrap: wrap;
+`
+
+const ListItem = styled.li`
+  border: 2px solid ${({ theme }) => theme.colors.offWhite};
+  flex: 1 0 33%;
+  text-align: center;
+  padding: 1rem 5rem;
+
+  .p-name-beer {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .p-name-tag {
+    padding-bottom: 1rem;
+  }
+`
 
 function BeerItem({ beer }) {
   const { name, tagline, image_url } = beer
   return (
-    <li>
-      <p>{name}</p>
-      <p>{tagline}</p>
+    <ListItem>
       <Image
         src={image_url}
         alt={name}
-        height={200}
+        height={270}
         width={100}
         placeholder="blur"
       />
-      <Link href={`/beers/${beer.id}`}>Have a gander</Link>
-    </li>
+      <p className="p-name-beer">{name}</p>
+      <p className="p-name-tag">{tagline}</p>
+
+      <Button link={`/beers/${beer.id}`}>have a gander..</Button>
+    </ListItem>
   )
 }
 
 export default function BeerList({ beers }) {
-  console.log(beers)
   return (
-    <ul>
+    <ListContainer>
       {beers.map((beer) => (
         <BeerItem key={beer.id} beer={beer} />
       ))}
-    </ul>
+    </ListContainer>
   )
 }

@@ -1,21 +1,17 @@
-import styled from 'styled-components'
+import Button from '../components/Button'
+import { Title, Emphasis } from './headerStyles'
 
-const Title = styled.h1`
-  font-size: 2rem;
-  text-align: center;
-  color: ${({ theme }) => theme.colors.primary};
-`
-
-const Emphasis = styled.em`
-  &:hover {
-    border-bottom: 2px solid ${({ theme }) => theme.colors.secondary};
-  }
-`
-
-export default function Header() {
+export default function Header({ isHomePage }) {
   return (
-    <Title>
-      Get ready to drink <Emphasis>oodles</Emphasis> of beer.
-    </Title>
+    <header>
+      <Title>
+        Get ready to drink <Emphasis>oodles</Emphasis> of beer.
+      </Title>
+      {!isHomePage && (
+        <div style={{ textAlign: 'center' }}>
+          <Button link="/">Go back!</Button>
+        </div>
+      )}
+    </header>
   )
 }

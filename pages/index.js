@@ -4,7 +4,7 @@ import { getAllBeers } from '../utils/fetchData'
 
 export default function Home(props) {
   return (
-    <Layout>
+    <Layout isHomePage>
       <BeerList beers={props.beers} />
     </Layout>
   )

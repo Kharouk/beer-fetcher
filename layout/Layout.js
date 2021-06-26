@@ -1,10 +1,12 @@
 import Header from './Header'
-export default function Layout({ children }) {
+import Footer from './Footer'
+
+export default function Layout({ children, isHomePage }) {
   return (
     <>
-      <Header />
+      <Header isHomePage={isHomePage} />
       <main>{children}</main>
-      <footer></footer>
+      <Footer />
     </>
   )
 }
