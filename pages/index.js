@@ -24,13 +24,11 @@ export default function Home(props) {
     ? beers.filter((beer) => beer.name.toLowerCase().includes(query))
     : beers
 
-  console.log(showFilteredBeers)
-
   return (
     <Layout isHomePage>
       <SearchContainer>
         <label>
-          <p>Know what you're looking for?</p>
+          <p>Know what you want?</p>
           <input
             value={query}
             onChange={handleChange}

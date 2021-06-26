@@ -16,11 +16,15 @@ export default function Footer() {
   return (
     <FooterStyle>
       Powered by 🍺 - Developed by{' '}
-      <a target="_blank" rel="noopener" href="https://alex.kharo.uk">
+      <a target="_blank" rel="noreferrer" href="https://alex.kharo.uk">
         Alex Kharouk
       </a>{' '}
       for{' '}
-      <a target="_blank" rel="noopener" href="https://www.oodlecarfinance.com">
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://www.oodlecarfinance.com"
+      >
         Oodle
       </a>
       .

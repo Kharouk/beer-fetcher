@@ -31,13 +31,7 @@ function BeerItem({ beer }) {
   const { name, tagline, image_url } = beer
   return (
     <ListItem>
-      <Image
-        src={image_url}
-        alt={name}
-        height={270}
-        width={100}
-        placeholder="blur"
-      />
+      <Image src={image_url} alt={name} height={270} width={100} />
       <p className="p-name-beer">{name}</p>
       <p className="p-name-tag">{tagline}</p>
 
