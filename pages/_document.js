@@ -30,12 +30,13 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en-GB">
         <Head>
           <link
             href="https://fonts.googleapis.com/css2?family=Karla&display=swap"
             rel="stylesheet"
           />
+          <title>Beer Fetcher</title>
         </Head>
         <body>
           <Main />

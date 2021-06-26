@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 const LinkStyle = styled.a`
   padding: 0.5rem 1rem;
+  background-color: red;
   border-radius: 0.5rem;
   background-color: ${({ theme }) => theme.colors.primary};
   cursor: pointer;

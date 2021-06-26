@@ -3,12 +3,16 @@ import styled from 'styled-components'
 import Button from './Button'
 
 const ListContainer = styled.ul`
-  padding: 2rem;
+  padding: 0.5rem;
   list-style: none;
   display: flex;
   column-gap: 2rem;
   row-gap: 2rem;
   flex-wrap: wrap;
+
+  @media (min-width: 800px) {
+    padding: 5rem;
+  }
 `
 
 const ListItem = styled.li`
@@ -31,7 +35,7 @@ function BeerItem({ beer }) {
   const { name, tagline, image_url } = beer
   return (
     <ListItem>
-      <Image src={image_url} alt={name} height={270} width={100} />
+      <Image src={image_url} alt={name} height={450} width={211} />
       <p className="p-name-beer">{name}</p>
       <p className="p-name-tag">{tagline}</p>
 
