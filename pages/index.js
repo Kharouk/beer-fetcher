@@ -25,7 +25,7 @@ export default function Home(props) {
         beer.name.toLowerCase().includes(query.toLowerCase())
       )
     : beers
-  console.log(showFilteredBeers)
+
   return (
     <Layout isHomePage>
       <SearchContainer>
