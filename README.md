@@ -37,5 +37,5 @@ Also tried to keep performance in as according to Lighthouse:
 
 - Maybe use Next's [Incremental Static Regeneration](https://nextjs.org/docs/basic-features/data-fetching#incremental-static-regeneration) for the index page just in case the data that we pull from the API does get updated, and our changes won't be reflected unless we rebuild.
 - Add even more testing around the React components.
-- Use Typescript instead of default Javascript.
+- Use Typescript instead of Javascript.
 - Improve that SEO Score!
